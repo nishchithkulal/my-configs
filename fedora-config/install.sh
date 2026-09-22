@@ -1,6 +1,6 @@
 sudo dnf install fastfetch
 sudo dnf install btop
-
+sudo dnf install dua-cli
 #install mise
 curl https://mise.run | sh
 echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
