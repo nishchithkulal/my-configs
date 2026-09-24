@@ -1,6 +1,9 @@
 # .bashrc
 alias ls='eza -l'
 alias cd='z'
+alias lg='lazygit'
+alias ld='lazydocker'
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
   . /etc/bashrc
