@@ -1,0 +1,17 @@
+{
+    "appearance": {
+        "transparency": {
+            "enabled": true
+        }
+    },
+    "general": {
+        "apps": {
+            "explorer": [
+                "dolphin"
+            ]
+        }
+    },
+    "services": {
+        "clockFormat": "TwelveHour"
+    }
+}
