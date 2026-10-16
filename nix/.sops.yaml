@@ -7,4 +7,4 @@ creation_rules:
     key_groups:
       - age:
           - *pc
-          # - *laptop
+       #  - *laptop
