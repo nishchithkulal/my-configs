@@ -4,15 +4,15 @@
   programs.niri = {
     enable = true;
 
-    # Same niri, but niri-session no longer prints systemd's
-    # "import-environment without a list ... is deprecated" notice.
+    # niri-session with the non-deprecated import-environment
+    # (explicit variable list instead of "import everything" with no args)
     package = pkgs.symlinkJoin {
-      name = "niri-quiet-session";
+      name = "niri-fixed-session";
       paths = [ pkgs.niri ];
       inherit (pkgs.niri) passthru meta;
       postBuild = ''
         rm $out/bin/niri-session
-        sed 's|systemctl --user import-environment$|& 2>/dev/null|' \
+        sed "s#systemctl --user import-environment\$#systemctl --user import-environment \$(awk 'BEGIN{for(v in ENVIRON) print v}' | grep -E '^[A-Za-z_][A-Za-z0-9_]*\$')#" \
           ${pkgs.niri}/bin/niri-session > $out/bin/niri-session
         chmod +x $out/bin/niri-session
       '';
