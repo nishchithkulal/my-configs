@@ -6,7 +6,7 @@
     ./networking.nix
     ./audio.nix
     ./desktop.nix
-    # ./fonts.nix
+    ./fonts.nix
     # ./bluetooth.nix
     # ./media.nix
     # ./gaming.nix
