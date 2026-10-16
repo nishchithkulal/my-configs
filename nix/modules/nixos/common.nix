@@ -9,7 +9,7 @@
     ./fonts.nix
     ./bluetooth.nix
     ./media.nix
-    # ./gaming.nix
+    ./gaming.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
