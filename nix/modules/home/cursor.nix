@@ -5,6 +5,7 @@ in
 {
   # GTK, XWayland and everything else
   home.pointerCursor = {
+    enable = true;
     inherit (cursor) package name size;
     gtk.enable = true;
     x11.enable = true;

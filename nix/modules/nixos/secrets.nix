@@ -20,6 +20,7 @@
   sops = {
     defaultSopsFile = ../../secrets/secrets.yaml;
     age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+    gnupg.sshKeyPaths = [ ];        # age only, don't import RSA key as GPG
 
     secrets.ssh_key = {
       owner = "chaotic_nylo";
