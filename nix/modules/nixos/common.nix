@@ -11,6 +11,7 @@
     ./bluetooth.nix
     ./media.nix
     ./dev.nix
+    ./greeter.nix
     ./gaming.nix
   ];
 
