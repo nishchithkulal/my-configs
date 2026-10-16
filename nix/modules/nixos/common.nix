@@ -8,7 +8,7 @@
     ./desktop.nix
     ./fonts.nix
     ./bluetooth.nix
-    # ./media.nix
+    ./media.nix
     # ./gaming.nix
   ];
 
