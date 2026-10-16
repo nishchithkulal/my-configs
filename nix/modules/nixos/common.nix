@@ -10,6 +10,7 @@
     ./secrets.nix
     ./bluetooth.nix
     ./media.nix
+    ./dev.nix
     ./gaming.nix
   ];
 
