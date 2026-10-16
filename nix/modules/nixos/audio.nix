@@ -1,13 +1,18 @@
-{ ... }:
+{ pkgs, ... }:
 {
   services.pulseaudio.enable = false;
-  security.rtkit.enable = true;          # realtime priority, avoids crackling
+  security.rtkit.enable = true;
 
   services.pipewire = {
     enable = true;
     alsa.enable = true;
-    alsa.support32Bit = true;            # 32-bit games (Steam/Wine)
-    pulse.enable = true;                 # apps that expect PulseAudio
-    jack.enable = true;                  # JACK apps, useful for streaming
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    pulseaudio     # only for the `pactl` tool (PulseAudio itself stays off)
+    pavucontrol    # GUI volume/output control
+  ];
 }
