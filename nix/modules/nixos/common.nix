@@ -13,6 +13,7 @@
     ./dev.nix
     ./greeter.nix
     ./gaming.nix
+    ./theme.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

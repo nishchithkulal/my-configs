@@ -1,16 +1,19 @@
-{ pkgs, ... }:
+{ config, ... }:
+let
+  cursor = config.my.theme.cursor;
+in
 {
   services.displayManager.noctalia-greeter = {
     enable = true;
-
-    # Noctalia Settings → Sync Now works without a password prompt for you
     passwordlessSyncUsers = [ "chaotic_nylo" ];
 
-    settings.keyboard.layout = "us";
+    settings = {
+      keyboard.layout = "us";
+      cursor.size = cursor.size;
+    };
 
     cursorTheme = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
+      inherit (cursor) package name;
     };
   };
 }

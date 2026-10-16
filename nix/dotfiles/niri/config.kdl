@@ -154,4 +154,4 @@ input {
 layout {
     background-color "transparent"
 }
-
+include "/home/chaotic_nylo/.config/niri-nix/cursor.kdl"
