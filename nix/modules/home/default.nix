@@ -5,6 +5,7 @@
     ./kitty.nix
     ./shell.nix
     ./apps.nix
+    ./editors.nix
   ];
 
   home.username = "chaotic_nylo";

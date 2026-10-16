@@ -8,8 +8,6 @@
     };
   };
 
-  home.sessionVariables.EDITOR = "vim";
-
   programs.git = {
     enable = true;
     settings.user = {
