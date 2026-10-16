@@ -5,6 +5,8 @@
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch";
       update  = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch";
+      lg = "lazygit";
+      ls = "eza -l"
     }; 
   };
 
