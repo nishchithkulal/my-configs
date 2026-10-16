@@ -4,16 +4,7 @@
   programs.niri.enable = true;          # niri + niri-session, portals, polkit, keyring
   hardware.graphics.enable = true;      # Mesa / OpenGL / Vulkan
 
-  # Login screen
-  services.greetd = {
-    enable = true;
-    settings.default_session = {
-      command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd niri-session";
-      user = "greeter";
-    };
-  };
-
-  # Services Noctalia's widgets read from
+   # Services Noctalia's widgets read from
   services.upower.enable = true;                 # battery
   services.power-profiles-daemon.enable = true;  # power profile switcher
 
