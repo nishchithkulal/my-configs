@@ -5,8 +5,7 @@
     ./users.nix
     ./networking.nix
     ./audio.nix
-    # Added in the next parts (importing a missing file is an error):
-    # ./desktop.nix
+    ./desktop.nix
     # ./fonts.nix
     # ./bluetooth.nix
     # ./media.nix
