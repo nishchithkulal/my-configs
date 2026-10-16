@@ -25,7 +25,7 @@
               extraSpecialArgs = { inherit inputs; };
               users.chaotic_nylo = import ./modules/home;
             };
-          };
+          }
         ];
       };
     in {
