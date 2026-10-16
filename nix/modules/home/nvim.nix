@@ -3,24 +3,27 @@
   home.packages = with pkgs; [
     neovim
 
-    # needed by plugins (lazy.nvim, treesitter, telescope)
-    git
+    # LazyVim requirements
+    lazygit          # <leader>gg
+    fzf              # fzf-lua picker
+    ripgrep          # grep / live search
+    fd               # file finder
+    tree-sitter      # parser compiler (needed by newer nvim-treesitter)
     gcc
     gnumake
     unzip
-    ripgrep
-    fd
-    nodejs
-    tree-sitter
+    curl
+    wget
 
-    # language servers / formatters (installed by Nix, not Mason)
-    lua-language-server
-    stylua
-    nil              # Nix LSP
+    # runtimes Mason uses to install tools
+    nodejs
+    python3
+
+    # Nix tooling (Mason doesn't provide these)
+    nil
     nixfmt
   ];
 
-  # ~/.config/nvim → your repo folder, editable live (no rebuild needed)
   xdg.configFile."nvim".source =
     config.lib.file.mkOutOfStoreSymlink
       "${config.home.homeDirectory}/my-configs/nix/dotfiles/nvim";
