@@ -7,6 +7,7 @@
     ./audio.nix
     ./desktop.nix
     ./fonts.nix
+    ./secrets.nix
     ./bluetooth.nix
     ./media.nix
     ./gaming.nix

@@ -1,0 +1,10 @@
+keys:
+  - &pc age1lwvmnwxky0e0un5yrq7sv0xw5taf4lma5hq4jshxqes0v8fmpvlq8gx72h
+  # - &laptop age1...        # added when the laptop is installed
+
+creation_rules:
+  - path_regex: secrets/secrets\.yaml$
+    key_groups:
+      - age:
+          - *pc
+          # - *laptop
