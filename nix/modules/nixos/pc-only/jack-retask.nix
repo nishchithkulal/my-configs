@@ -1,6 +1,9 @@
 { pkgs, ... }:
 let
-  sink = "alsa_output.pci-0000_30_00.6.analog-stereo";   # Realtek ALC897
+  card    = "alsa_card.pci-0000_30_00.6";                  # Realtek ALC897
+  sink    = "alsa_output.pci-0000_30_00.6.analog-stereo";
+  profile = "output:analog-stereo+input:analog-stereo";
+  port    = "analog-output-headphones";
 in
 {
   # 1. Pin retask: loaded by the sound driver at boot
@@ -12,20 +15,30 @@ in
     options snd-hda-intel patch=hda-jack-retask.fw,hda-jack-retask.fw,hda-jack-retask.fw,hda-jack-retask.fw
   '';
 
-  # 2. Default output: Realtek gets the highest priority in WirePlumber
-  services.pipewire.wireplumber.extraConfig."50-realtek-default" = {
+  # 2. WirePlumber rules for the Realtek card
+  services.pipewire.wireplumber.extraConfig."50-realtek" = {
     "monitor.alsa.rules" = [
       {
+        # Card: always on, never switched by jack detection
+        matches = [ { "device.name" = card; } ];
+        actions.update-props = {
+          "device.profile" = profile;
+          "api.acp.auto-profile" = false;
+          "api.acp.auto-port" = false;
+        };
+      }
+      {
+        # Output: highest priority → default
         matches = [ { "node.name" = sink; } ];
         actions.update-props = {
-          "priority.session" = 2000;   # HDMI/USB outputs are ~1000 or lower
+          "priority.session" = 2000;
           "priority.driver" = 2000;
         };
       }
     ];
   };
 
-  # 3. Port: Realtek → Headphones at every login
+  # 3. At login: profile on, Realtek default, Headphones port
   systemd.user.services.realtek-headphones = {
     description = "Set Realtek output to Headphones";
     after = [ "wireplumber.service" ];
@@ -33,12 +46,20 @@ in
     path = with pkgs; [ pulseaudio gnugrep coreutils ];
     serviceConfig.Type = "oneshot";
     script = ''
+      # wait for the card (max 10 s)
+      for i in $(seq 20); do
+        pactl list short cards | grep -q "${card}" && break
+        sleep 0.5
+      done
+      pactl set-card-profile ${card} ${profile}
+
+      # wait for its output (max 10 s)
       for i in $(seq 20); do
         pactl list short sinks | grep -q "${sink}" && break
         sleep 0.5
       done
       pactl set-default-sink ${sink}
-      pactl set-sink-port ${sink} analog-output-headphones
+      pactl set-sink-port ${sink} ${port}
     '';
   };
 }
