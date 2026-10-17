@@ -13,6 +13,5 @@
     lutris
     heroic
     steam-run        # runs non-Nix Linux binaries (SKLauncher, random game tarballs)
-    jdk21            # Java for SKLauncher / Minecraft
   ];
 }
