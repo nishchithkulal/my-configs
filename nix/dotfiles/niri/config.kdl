@@ -52,6 +52,7 @@ binds {
     Mod+N { spawn-sh "noctalia msg panel-toggle notifications"; }
     Mod+X { spawn-sh "noctalia msg panel-toggle session"; }
     Mod+W { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+Shift+S { spawn-sh "noctalia msg screenshot-region"; }
 
     // Window management
     Mod+F { maximize-column; }
