@@ -8,6 +8,7 @@
     ./editors.nix
     ./nvim.nix
     ./cursor.nix
+    ./cli.nix
   ];
 
   home.username = "chaotic_nylo";
