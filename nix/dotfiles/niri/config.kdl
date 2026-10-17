@@ -58,7 +58,7 @@ binds {
     Mod+Shift+F { fullscreen-window; }
     Mod+Q { close-window; }
     Mod+T { spawn-sh "kitty"; }
-    Mod+B { spawn "helium"; }
+    Mod+B { spawn "brave-origin"; }
     Mod+E { spawn "nautilus"; }
     Mod+Tab repeat=false { toggle-overview; }
 
