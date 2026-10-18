@@ -8,6 +8,7 @@
     fd
     unzip
     brave-origin
+    bat
     eza
   ];
   }
