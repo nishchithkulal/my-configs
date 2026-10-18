@@ -9,6 +9,7 @@
     ./nvim.nix
     ./cursor.nix
     ./cli.nix
+    ./ghostty.nix
   ];
 
   home.username = "chaotic_nylo";
