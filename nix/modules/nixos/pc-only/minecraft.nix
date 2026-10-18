@@ -17,7 +17,7 @@ let
 in
 {
   environment.systemPackages = [
-    pkgs.jdk21          # Java for Minecraft
+    pkgs.jdk21
     sklauncher
     sklauncherDesktop
   ];
