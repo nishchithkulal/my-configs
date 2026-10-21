@@ -7,8 +7,9 @@
     ./apps.nix
     ./editors.nix
     ./nvim.nix
-    ./cli.nix
     ./mouse-cursor.nix
+    ./mise.nix
+    ./zoxide.nix
     ./ghostty.nix
     ./git.nix
     ./bash.nix
