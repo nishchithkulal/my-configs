@@ -7,6 +7,7 @@
     ./audio.nix
     ./fonts.nix
     ./niri.nix
+    ./noctalia.nix
     ./secrets.nix
     ./bluetooth.nix
     ./media.nix
