@@ -10,6 +10,7 @@
     ./cli.nix
     ./mouse-cursor.nix
     ./ghostty.nix
+    ./git.nix
   ];
 
   home.username = "chaotic_nylo";
