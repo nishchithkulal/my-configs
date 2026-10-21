@@ -12,6 +12,7 @@
     ./ghostty.nix
     ./git.nix
     ./bash.nix
+    ./zsh.nix
   ];
 
   home.username = "chaotic_nylo";
