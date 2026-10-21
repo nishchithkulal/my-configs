@@ -43,7 +43,7 @@ in
       foreground = "#dddddd";
       background-opacity = 0.75;                # keep equal to the tint above and kitty.conf
       window-padding-x = 6;
-      window-padding-y = 6;
+      window-padding-y = 0;
       window-padding-balance = true;
       window-padding-color = "extend-always";
       window-decoration = false;
