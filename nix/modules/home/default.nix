@@ -3,7 +3,7 @@
   imports = [
     ./niri.nix
     ./kitty.nix
-    ./shell.nix
+    ./shell-aliases.nix
     ./apps.nix
     ./editors.nix
     ./nvim.nix
