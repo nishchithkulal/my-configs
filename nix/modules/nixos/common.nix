@@ -5,8 +5,9 @@
     ./users.nix
     ./networking.nix
     ./audio.nix
-    ./desktop.nix
     ./fonts.nix
+    ./niri.nix
+    ./noctalia.nix
     ./secrets.nix
     ./bluetooth.nix
     ./media.nix
@@ -28,6 +29,8 @@
     dates = "weekly";
     options = "--delete-older-than 14d";
   };
+
+  hardware.graphics.enable = true;
 
   time.timeZone = "Asia/Kolkata";
   i18n.defaultLocale = "en_US.UTF-8";
