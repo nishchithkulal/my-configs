@@ -38,5 +38,6 @@
     wl-clipboard
     wl-mirror
     brightnessctl
+    nautilus
   ];
 }
