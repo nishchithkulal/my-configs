@@ -13,6 +13,7 @@
     ./git.nix
     ./bash.nix
     ./zsh.nix
+    ./fish.nix
   ];
 
   home.username = "chaotic_nylo";
