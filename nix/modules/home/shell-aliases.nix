@@ -7,5 +7,6 @@
     lg = "lazygit";
     ls = "eza -l";
     cat = "bat";
+    niri-validate = "niri validate --config ~/my-configs/nix/dotfiles/niri/config.kdl"
   };
 }
