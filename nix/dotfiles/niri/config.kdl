@@ -6,16 +6,7 @@ include "./niri-overview.kdl"
 include "./wallpaper-layer.kdl"
 include "./debug.kdl"
 include "./binds.kdl"
-
-input {
-    touchpad {
-        tap
-        dwt
-        natural-scroll
-    }
-
-    focus-follows-mouse
-}
+include "./input.kdl"
 
 layout {
     background-color "transparent"

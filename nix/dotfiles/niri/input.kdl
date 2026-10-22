@@ -1,0 +1,11 @@
+input {
+    touchpad {
+        tap
+        dwt
+        natural-scroll
+    }
+
+    focus-follows-mouse
+}
+
+
