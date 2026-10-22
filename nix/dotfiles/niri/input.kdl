@@ -1,11 +1,13 @@
 input {
-    touchpad {
-        tap
-        dwt
-        natural-scroll
-    }
-
-    focus-follows-mouse
+  touchpad {
+      tap
+      dwt
+      natural-scroll
+  }
+  keyboard {
+      numlock
+  }
+  focus-follows-mouse
 }
 
 
