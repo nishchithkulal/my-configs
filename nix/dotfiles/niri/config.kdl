@@ -3,13 +3,7 @@ include "./monitors.kdl"
 include "./window-rules.kdl"
 include "./decorations.kdl"
 include "./niri-overview.kdl"
-
-// Noctalia wallpaper layer
-layer-rule {
-    match namespace="^noctalia-wallpaper$"
-    place-within-backdrop true
-}
-
+include "./wallpaper-layer.kdl"
 
 debug {
     // Allows notification actions and window activation from Noctalia.
