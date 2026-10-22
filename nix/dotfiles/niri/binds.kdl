@@ -1,6 +1,6 @@
 binds {
 
-  Mod+Shift+K { show-hotkey-overlay; }
+  Mod+Ctrl+K { show-hotkey-overlay; }
 
   // Noctalia shell
   Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
@@ -14,7 +14,7 @@ binds {
   Mod+Shift+S { spawn-sh "noctalia msg screenshot-region"; }
 
   // Nvim Editor
-  Mod+C { spawn "ghostty" "-e" "nvim"; }
+  Mod+Shift+C { spawn "ghostty" "-e" "nvim"; }
 
 
   // Window management
