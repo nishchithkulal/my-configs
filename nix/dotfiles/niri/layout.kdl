@@ -1,0 +1,13 @@
+layout {
+    background-color "transparent"
+
+    // Active window highlight (only the focused window gets it, no default blue)
+    focus-ring {
+        width 2
+        active-gradient from="#ffb38a" to="#ff6f91" angle=45
+        inactive-color "#00000000"
+    }
+    border {
+        off
+    }
+}
