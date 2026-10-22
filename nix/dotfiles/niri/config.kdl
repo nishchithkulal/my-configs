@@ -4,11 +4,7 @@ include "./window-rules.kdl"
 include "./decorations.kdl"
 include "./niri-overview.kdl"
 include "./wallpaper-layer.kdl"
-
-debug {
-    // Allows notification actions and window activation from Noctalia.
-    honor-xdg-activation-with-invalid-serial
-}
+include "./debug.kdl"
 
 binds {
     // Noctalia shell
