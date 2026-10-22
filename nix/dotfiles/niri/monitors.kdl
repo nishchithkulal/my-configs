@@ -1,0 +1,4 @@
+// BenQ GW2490 (PC monitor): 100 Hz
+output "PNP(BNQ) BenQ GW2490 BBR0640101Q" {
+    mode "1920x1080@100.000"
+}
