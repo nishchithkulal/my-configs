@@ -13,6 +13,10 @@ binds {
   Mod+W { spawn-sh "noctalia msg panel-toggle wallpaper"; }
   Mod+Shift+S { spawn-sh "noctalia msg screenshot-region"; }
 
+  // Nvim Editor
+  Mod+C { spawn "ghostty" "-e" "nvim"; }
+
+
   // Window management
   Mod+F { maximize-column; }
   Mod+Shift+F { fullscreen-window; }
