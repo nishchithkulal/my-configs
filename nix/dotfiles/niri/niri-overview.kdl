@@ -1,0 +1,8 @@
+// Niri overview
+overview {
+    zoom 0.90
+
+    workspace-shadow {
+        off
+    }
+}

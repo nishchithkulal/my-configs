@@ -2,16 +2,7 @@ include "./starup.kdl"
 include "./monitors.kdl"
 include "./window-rules.kdl"
 include "./decorations.kdl"
-
-// Experimental: place the wallpaper in Niri's overview backdrop.
-// Niri overview
-overview {
-    zoom 0.90
-
-    workspace-shadow {
-        off
-    }
-}
+include "./niri-overview.kdl"
 
 // Noctalia wallpaper layer
 layer-rule {
