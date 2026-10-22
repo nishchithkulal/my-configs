@@ -1,0 +1,7 @@
+// Blur strength (raise offset for more frosted glass)
+blur {
+    passes 3
+    offset 2.5
+}
+
+

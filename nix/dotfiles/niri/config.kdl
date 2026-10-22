@@ -1,12 +1,7 @@
 include "./starup.kdl"
 include "./monitors.kdl"
 include "./window-rules.kdl"
-
-// Blur strength (raise offset for more frosted glass)
-blur {
-    passes 3
-    offset 2.5
-}
+include "./decorations.kdl"
 
 // Experimental: place the wallpaper in Niri's overview backdrop.
 // Niri overview
