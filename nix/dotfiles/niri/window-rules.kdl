@@ -1,0 +1,30 @@
+// Ask apps not to draw their own title bars (no app name bar at the top)
+prefer-no-csd
+
+window-rule {
+    // Rounded corners for a modern look.
+    geometry-corner-radius 20
+    clip-to-geometry true
+    // Transparent windows: no solid block behind them
+    draw-border-with-background false
+}
+
+// Floating Noctalia settings window.
+window-rule {
+    match app-id="dev.noctalia.Noctalia"
+    open-floating true
+    default-column-width { fixed 1080; }
+    default-window-height { fixed 920; }
+}
+
+// Glass effect for terminals
+window-rule {
+    match app-id="^com\\.mitchellh\\.ghostty$"
+    match app-id="^kitty$"
+
+    background-effect {
+        blur true
+        saturation 1.3
+        noise 0.03
+    }
+}
