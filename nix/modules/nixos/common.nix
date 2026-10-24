@@ -15,6 +15,7 @@
     ./greeter.nix
     ./gaming.nix
     ./theme.nix
+    ./libreoffice.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
