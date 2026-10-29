@@ -16,6 +16,9 @@ binds {
   // Nvim Editor
   Mod+Shift+C { spawn "ghostty" "-e" "nvim"; }
 
+  // Zed Editor
+  Mod+Ctrl+C { spawn "zeditor"; }
+
   // Window management
   Mod+F { maximize-column; }
   Mod+Shift+F { fullscreen-window; }
@@ -83,6 +86,10 @@ binds {
   // Move through workspaces
   Mod+I { focus-workspace-up; }
   Mod+U { focus-workspace-down; }
+
+  //Move Column to workspaces
+  Mod+Shift+U { move-column-to-workspace-down; }
+  Mod+Shift+I { move-column-to-workspace-up; }
 
   // Center focused column
   Mod+C { center-column; }
