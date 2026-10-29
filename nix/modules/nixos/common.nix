@@ -16,6 +16,7 @@
     ./gaming.nix
     ./theme.nix
     ./libreoffice.nix
+    ./docker.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
