@@ -7,6 +7,7 @@
     ./apps.nix
     ./editors.nix
     ./nvim.nix
+    ./obsidian.nix
     ./mouse-cursor.nix
     ./mise.nix
     ./zoxide.nix
