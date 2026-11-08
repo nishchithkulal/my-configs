@@ -1,23 +1,24 @@
 { pkgs, ... }:
+
 let
-  # `sklauncher` command: runs SKlauncher inside steam-run (needs /usr/lib for GTK/OpenGL)
   sklauncher = pkgs.writeShellScriptBin "sklauncher" ''
-    exec ${pkgs.steam-run}/bin/steam-run ${pkgs.jdk21}/bin/java -jar "$HOME/Games/SKlauncher.jar" "$@"
+    exec ${pkgs.appimage-run}/bin/appimage-run \
+      "$HOME/Games/SKlauncher-4.0.57-x86_64.AppImage" "$@"
   '';
 
-  # App launcher entry
   sklauncherDesktop = pkgs.makeDesktopItem {
     name = "sklauncher";
     desktopName = "SKlauncher";
-    comment = "Minecraft launcher";
+    comment = "Minecraft Launcher";
     exec = "${sklauncher}/bin/sklauncher";
     icon = "applications-games";
     categories = [ "Game" ];
   };
+
 in
 {
   environment.systemPackages = [
-    pkgs.jdk21
+    pkgs.appimage-run
     sklauncher
     sklauncherDesktop
   ];
