@@ -1,8 +1,9 @@
+
 { pkgs, ... }:
 
 let
   curseforge = pkgs.writeShellScriptBin "curseforge" ''
-    APPIMAGE="$HOME/CurseForge/curseforge-latest-linux.AppImage"
+    APPIMAGE="$HOME/Games/curseforge-latest-linux.AppImage"
 
     if [ ! -f "$APPIMAGE" ]; then
       echo "CurseForge AppImage not found: $APPIMAGE"
@@ -10,11 +11,12 @@ let
     fi
 
     chmod +x "$APPIMAGE"
-    exec "$APPIMAGE" --no-sandbox "$@"
+    exec "$APPIMAGE" "$@"
   '';
 in
 {
-  home.packages = [
+  environment.systemPackages = [
     curseforge
   ];
 }
+
